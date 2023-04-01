@@ -1,0 +1,11 @@
+import numpy as np
+array = np.random.randint(20,size=(15))
+print("Random elements from range 1 to 20:")
+print(array)
+x=array.reshape(3,5)
+print("After reshape:")
+print(x)
+print("Shape:", x.shape)
+a=x.max(axis=1).reshape(-1,1)
+result = np.where(x == a,0,x)
+print(result)
